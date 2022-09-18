@@ -21,6 +21,13 @@ public class TaskService implements TaskServiceInterface {
     public void deleteTask(Task task) {
         taskRepository.deleteTask(task);
     }
+
+    @Override
+    public Task getTaskForId(int id) {
+        return taskRepository.getTask(id);
+        
+        
+    }
     
     
 }
