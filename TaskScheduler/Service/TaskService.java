@@ -1,13 +1,25 @@
 package Service;
 
 import ObjectClasses.Task;
+import Repository.TaskRepository;
 
 public class TaskService implements TaskServiceInterface {
+    private TaskRepository taskRepository;
+
+    public TaskService(TaskRepository taskRepository) {
+        this.taskRepository = taskRepository;
+    }
 
     @Override
     public void addTask(Task task) {
+        taskRepository.addTask(task);
        
         
+    }
+
+    @Override
+    public void deleteTask(Task task) {
+        taskRepository.deleteTask(task);
     }
     
     
