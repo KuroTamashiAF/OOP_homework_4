@@ -1,4 +1,4 @@
-package TaskScheduler.ObjectClasses;
+package ObjectClasses;
 
 public enum Priority {
     LOW, 

@@ -1,4 +1,4 @@
-package TaskScheduler.Service;
+package Service;
 
 public interface TaskServiceInterface {
     

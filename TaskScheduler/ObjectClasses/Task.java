@@ -1,4 +1,4 @@
-package TaskScheduler.ObjectClasses;
+package ObjectClasses;
 
 import java.sql.Date;
 
