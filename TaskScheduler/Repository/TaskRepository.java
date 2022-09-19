@@ -1,8 +1,8 @@
 package Repository;
-
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
-
+import java.util.List;
 import ObjectClasses.Priority;
 import ObjectClasses.Task;
 
@@ -35,8 +35,8 @@ public class TaskRepository {
         return null;
     }
 
-    public Deque<Task> getOnePriorityTasks(Priority priority){
-        Deque<Task> result = new ArrayDeque<>();
+    public List<Task> getOnePriorityTasks(Priority priority){
+        List<Task> result = new ArrayList<>();
         for (Task task : taskDeque) {
             if (task.getPriority() == priority) {
                 result.add(task);

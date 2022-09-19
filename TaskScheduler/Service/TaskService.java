@@ -1,5 +1,8 @@
 package Service;
 
+import java.util.List;
+
+import ObjectClasses.Priority;
 import ObjectClasses.Task;
 import Repository.TaskRepository;
 
@@ -25,8 +28,11 @@ public class TaskService implements TaskServiceInterface {
     @Override
     public Task getTaskForId(int id) {
         return taskRepository.getTask(id);
-        
-        
+    }
+
+    @Override
+    public List<Task> getOnePriorityTasks(Priority priority) {
+        return taskRepository.getOnePriorityTasks(priority);
     }
     
     
