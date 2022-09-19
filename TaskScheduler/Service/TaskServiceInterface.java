@@ -1,4 +1,5 @@
 package Service;
+import java.util.Deque;
 import java.util.List;
 
 import ObjectClasses.Priority;
@@ -11,6 +12,8 @@ public interface TaskServiceInterface {
     void deleteTask(Task task);
     Task getTaskForId(int id);
     List<Task> getOnePriorityTasks(Priority priority);
+    Deque<Task> getAllTasks();
+
 
     
 }

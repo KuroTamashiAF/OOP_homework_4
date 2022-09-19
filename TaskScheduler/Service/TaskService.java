@@ -1,5 +1,6 @@
 package Service;
 
+import java.util.Deque;
 import java.util.List;
 
 import ObjectClasses.Priority;
@@ -9,15 +10,13 @@ import Repository.TaskRepository;
 public class TaskService implements TaskServiceInterface {
     private TaskRepository taskRepository;
 
-    public TaskService(TaskRepository taskRepository) {
-        this.taskRepository = taskRepository;
+    public TaskService() {
+        this.taskRepository = new TaskRepository();
     }
 
     @Override
     public void addTask(Task task) {
         taskRepository.addTask(task);
-       
-        
     }
 
     @Override
@@ -34,6 +33,11 @@ public class TaskService implements TaskServiceInterface {
     public List<Task> getOnePriorityTasks(Priority priority) {
         return taskRepository.getOnePriorityTasks(priority);
     }
-    
+
+    @Override
+    public Deque<Task> getAllTasks() {
+        System.out.println();
+        return taskRepository.getTaskDeque();
+    }
     
 }

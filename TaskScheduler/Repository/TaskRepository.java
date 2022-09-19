@@ -23,7 +23,6 @@ public class TaskRepository {
 
     public void deleteTask(Task task) {
         taskDeque.remove(task);
-
     }
 
     public Task getTask(int id) {
@@ -44,4 +43,5 @@ public class TaskRepository {
         }
         return result;
     }
+    
 }
