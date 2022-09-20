@@ -6,7 +6,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
+
+import ObjectClasses.Priority;
 import ObjectClasses.Task;
 import Service.TaskService;
 import Service.TaskServiceInterface;
@@ -14,8 +20,8 @@ import Service.TaskServiceInterface;
 public class ReadTasks {
     TaskServiceInterface taskService; 
 
-    public ReadTasks(TaskServiceInterface taskService) {
-        taskService = taskService;
+    public ReadTasks(TaskServiceInterface taskServic) {
+        taskService = taskServic;
     }
     
     public List<Task> listTasks(String path){
@@ -28,6 +34,15 @@ public class ReadTasks {
             // считаем сначала первую строку
             String line = reader.readLine();
             while (line != null) {
+                List <String> stringParams = Arrays.stream(line.split(",")).toList();
+                Task task = new Task(Integer.parseInt(stringParams.get(0)), parseStringToPriority(stringParams.get(1)), stringParams.get(2),parseStringToDate(stringParams.get(3)),stringParams.get(4));
+
+
+
+
+
+
+
             System.out.println(line);
             // считываем остальные строки в цикле
             line = reader.readLine();
@@ -39,5 +54,12 @@ public class ReadTasks {
             }
 
         return List.of();
+    }
+    private Priority parseStringToPriority(String priorityString){
+        return Priority.valueOf(priorityString);
+    }
+    private LocalDate parseStringToDate(String dateString){
+     
+        return LocalDate.parse(dateString);
     }
 }

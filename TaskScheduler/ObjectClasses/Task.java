@@ -1,6 +1,7 @@
 package ObjectClasses;
 
-import java.sql.Date;
+//import java.sql.Date;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Task {
@@ -8,11 +9,11 @@ public class Task {
     private Priority priority;
     private String discription;
     private String ownerName;
-    private LocalDateTime deadLine;
+    private LocalDate deadLine;
     private LocalDateTime dateAdded;
 
 
-    public Task(int id, Priority priority, String ownerName, LocalDateTime deadLine, String discription) {
+    public Task(int id, Priority priority, String ownerName, LocalDate deadLine, String discription) {
         this.id = id;
         this.priority = priority;
         this.ownerName = ownerName;
