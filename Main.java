@@ -16,7 +16,7 @@ public class Main {
         Task task3 = new Task(3, Priority.URGENT, "Vasya", LocalDateTime.now().plusDays(5), 
         "позвонить бородину младшему");
         Task task4 = new Task(4, Priority.MEDIUM, "Mary", LocalDateTime.now().plusDays(4), 
-        "Написать пьмо на понедельник");
+        "Написать письмо на понедельник");
 
         
         TaskServiceInterface taskservice = new TaskService();
@@ -24,9 +24,9 @@ public class Main {
         taskservice.addTask(task2);
         taskservice.addTask(task3);
         taskservice.addTask(task4);
-        //System.out.println(taskservice.getOnePriorityTasks(Priority.URGENT));
+        System.out.println(taskservice.getOnePriorityTasks(Priority.MEDIUM));
         //System.out.println(taskservice.getTaskForId(3));
-        System.out.println(taskservice.getAllTasks());
+        //System.out.println(taskservice.getAllTasks());
         
         
 
