@@ -1,7 +1,9 @@
 import java.time.LocalDateTime;
 
 import ObjectClasses.*;
+import ReadTasksFromFile.ReadTasks;
 import Service.*;
+import ReadTasksFromFile.ReadTasks;
 
 
 
@@ -20,13 +22,17 @@ public class Main {
 
         
         TaskServiceInterface taskservice = new TaskService();
-        taskservice.addTask(task1);
-        taskservice.addTask(task2);
-        taskservice.addTask(task3);
-        taskservice.addTask(task4);
-        System.out.println(taskservice.getOnePriorityTasks(Priority.MEDIUM));
+        ReadTasks raedTasks = new ReadTasks(taskservice);
+        raedTasks.listTasks("C:\\Users\\Фёдоров Александр\\Desktop\\Учеба - Разработчик\\Object Oriented Programming\\homeWork4\\Test.txt");
+
+        // taskservice.addTask(task1);
+        // taskservice.addTask(task2);
+        // taskservice.addTask(task3);
+        // taskservice.addTask(task4);
+        // System.out.println(taskservice.getOnePriorityTasks(Priority.MEDIUM));
         //System.out.println(taskservice.getTaskForId(3));
         //System.out.println(taskservice.getAllTasks());
+        // ReadTasks tryread = new ReadTasks();
         
         
 
