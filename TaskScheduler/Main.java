@@ -2,6 +2,7 @@ import java.time.LocalDate;
 import ObjectClasses.*;
 import ReadTasksFromFile.ReadTasks;
 import Service.*;
+import WriteTasks.WriteTasksInfile;
 
 
 
@@ -28,8 +29,13 @@ public class Main {
         
 
         
-        ReadTasks raedTasks = new ReadTasks(taskservice);
-        raedTasks.listTasks("C:\\Users\\Фёдоров Александр\\Desktop\\Учеба - Разработчик\\Object Oriented Programming\\homeWork4\\TaskScheduler\\Test.txt");
+        // ReadTasks raedTasks = new ReadTasks(taskservice);
+        // raedTasks.listTasks("C:\\Users\\Фёдоров Александр\\Desktop\\Учеба - Разработчик\\Object Oriented Programming\\homeWork4\\TaskScheduler\\Test.txt");
         System.out.println(taskservice.getAllTasks());
+
+
+
+        WriteTasksInfile writeTasks = new WriteTasksInfile(taskservice);
+        writeTasks.writeDataInFile();
     }
 }

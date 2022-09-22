@@ -44,5 +44,8 @@ public class TaskService implements TaskServiceInterface {
     public void markAsDone(int id) {
         taskRepository.taskIsDone(id);
     }
+    public TaskRepository getTaskRepository() {
+        return taskRepository;
+    }
     
 }
