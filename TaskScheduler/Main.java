@@ -23,6 +23,10 @@ public class Main {
         taskservice.addTask(task2);
         taskservice.addTask(task3);
         taskservice.addTask(task4);
+        taskservice.markAsDone(1);
+        taskservice.markAsDone(2);
+        
+
         
         ReadTasks raedTasks = new ReadTasks(taskservice);
         raedTasks.listTasks("C:\\Users\\Фёдоров Александр\\Desktop\\Учеба - Разработчик\\Object Oriented Programming\\homeWork4\\TaskScheduler\\Test.txt");
