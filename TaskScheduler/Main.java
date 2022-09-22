@@ -25,8 +25,7 @@ public class Main {
         taskservice.addTask(task4);
         
         ReadTasks raedTasks = new ReadTasks(taskservice);
-        raedTasks.listTasks("Test.txt");
+        raedTasks.listTasks("C:\\Users\\Фёдоров Александр\\Desktop\\Учеба - Разработчик\\Object Oriented Programming\\homeWork4\\TaskScheduler\\Test.txt");
         System.out.println(taskservice.getAllTasks());
-    
     }
 }

@@ -43,5 +43,12 @@ public class TaskRepository {
         }
         return result;
     }
+    public void taskIsDone(int id){
+        for (Task task : taskDeque) {
+            if (task.getId() == id) {
+                task.setCompletionMark(true);
+            }
+        }
+    }
     
 }

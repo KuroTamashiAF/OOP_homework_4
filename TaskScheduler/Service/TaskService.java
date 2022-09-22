@@ -39,5 +39,10 @@ public class TaskService implements TaskServiceInterface {
         System.out.println();
         return taskRepository.getTaskDeque();
     }
+
+    @Override
+    public void markAsDone(int id) {
+        taskRepository.taskIsDone(id);
+    }
     
 }

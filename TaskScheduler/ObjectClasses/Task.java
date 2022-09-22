@@ -11,6 +11,7 @@ public class Task {
     private String ownerName;
     private LocalDate deadLine;
     private LocalDateTime dateAdded;
+    private boolean completionMark = false;
 
 
     public Task(int id, Priority priority, String ownerName, LocalDate deadLine, String discription) {
@@ -33,6 +34,12 @@ public class Task {
     @Override
     public String toString() {
         
-        return discription;
+        return String.format(" %d - %s, %s, %s %s, ", id, discription,dateAdded, deadLine, completionMark + "\n");
+    }
+    public boolean getCompletionMark(){
+        return completionMark;
+    }
+    public void setCompletionMark(boolean completionMark) {
+        this.completionMark = completionMark;
     }
 }

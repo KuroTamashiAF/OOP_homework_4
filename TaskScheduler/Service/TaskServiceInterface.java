@@ -13,6 +13,7 @@ public interface TaskServiceInterface {
     Task getTaskForId(int id);
     List<Task> getOnePriorityTasks(Priority priority);
     Deque<Task> getAllTasks();
+    void markAsDone (int id);
 
 
     

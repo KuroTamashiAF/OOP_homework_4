@@ -34,7 +34,6 @@ public class ReadTasks {
                 List <String> stringParams = Arrays.stream(line.split(",")).toList();
                 Task task = new Task(stringToInt(stringParams.get(0)), parseStringToPriority(stringParams.get(1)),
                  stringParams.get(2),parseStringToDate(stringParams.get(3)),stringParams.get(4));
-
                 taskService.addTask(task);
             //System.out.println(line);
             // считываем остальные строки в цикле
@@ -46,7 +45,7 @@ public class ReadTasks {
             e.printStackTrace();
             }
 
-        return List.of();
+        return null;
     }
     private Priority parseStringToPriority(String priorityString){
         return Priority.valueOf(priorityString);
